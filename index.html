@@ -10,9 +10,9 @@
     <div class="menu">
       <div id="name">Funiro.</div>
       <nav>
-        <div class="First dropdown">
+        <div class="dropdown">
           <p>Products</p>
-            <div class="Second dropdown-content">
+            <div class="dropdown-content">
               <a href="#">Chairs</a>
               <a href="#">Tables</a>
               <a href="#">Sofas</a>
@@ -21,9 +21,9 @@
               <a href="#">Nightstands</a>
             </div>
         </div>
-        <div class="First dropdown">
+        <div class="dropdown">
           <p>Rooms</p>
-            <div class="Second dropdown-content">
+            <div class="dropdown-content">
               <a href="#">Bedroom</a>
               <a href="#">Living room</a>
               <a href="#">Bathroom</a>
@@ -32,7 +32,9 @@
               <a href="#">Dining room</a>
             </div>
         </div>
-        <p>Inspirations</p>
+        <div class="dropdown">
+          <p>Inspirations</p>
+        </div>
       </nav>
       <div class="general-settings">
         <div class="SearchBlock">
@@ -41,9 +43,43 @@
         </div>
         <input type="text" placeholder="Search for more" id="search">
         </div>
-        <div class="navigation">
+        <div class="profile">
           <ion-icon name="cart"></ion-icon>
           <ion-icon name="person"></ion-icon>
+        </div>
+      </div>
+      <div class="mobile">
+        <ion-icon name="menu-outline" class="mobile-icon"></ion-icon>
+        <div class="mobile-block">
+          <div class="dropdown" id="first-drop">
+            <p>Products</p>
+              <div class="dropdown-content">
+                <a href="#" class="first">Chairs</a>
+                <a href="#">Tables</a>
+                <a href="#">Sofas</a>
+                <a href="#">Beds</a>
+                <a href="#">Wardrobes</a>
+                <a href="#" class="last">Nightstands</a>
+              </div>
+          </div>
+          <div class="dropdown">
+            <p>Rooms</p>
+              <div class="dropdown-content">
+                <a href="#" class="first">Bedroom</a>
+                <a href="#">Living room</a>
+                <a href="#">Bathroom</a>
+                <a href="#">Kitchen</a>
+                <a href="#">Study room</a>
+                <a href="#" class="last">Dining room</a>
+              </div>
+          </div>
+          <div class="dropdown">
+            <p>Inspirations</p>
+          </div>
+          <div class="mobile-profile">
+            <div id="first"><ion-icon name="cart"></ion-icon></div>
+            <div><ion-icon name="person"></ion-icon></div>
+          </div>
         </div>
       </div>
     </div>

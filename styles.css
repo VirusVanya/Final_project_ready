@@ -13,6 +13,8 @@ a {
 	text-decoration: none;
 }
 
+/* Header */
+
 header {
 	width: 100%;
 	background: linear-gradient(90deg, #fff4e6, #f0c792);
@@ -36,10 +38,12 @@ header {
 	position: relative;
 }
 
+/* Dropdown menu */
+
 nav {
 	position: relative;
 	display: flex;
-	width: 350px;
+	width: 365px;
 	justify-content: space-around;
 }
 
@@ -49,31 +53,28 @@ nav p {
 
 .dropdown {
     position: relative;
-    width: 35%;
+	width: 120px;
+	height: 50px;
 	cursor: pointer;
 	transition: 0.4s;
-}
-
-.dropdown p {
-	position: relative;
+	z-index: 1;
 	text-align: center;
 }
 
 .dropdown-content {
     display: none;
+	width: 120px;
     position: absolute;
-    width: 100%;
-    height: 500%;
-    text-align: center;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+	width: 120px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
     background-color: white;
 	transition: 0.4s;
 	cursor: pointer;
@@ -84,18 +85,113 @@ nav p {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex;
     background-color: white;
-    z-index: 3;
 }
 
 .dropdown:hover {
-    background-color: white;
+    background-color: #f1f1f1;
 }
+
+.mobile {
+	display: none;
+	left: 90%;
+	position: absolute;
+	top: 30px;
+	justify-content: flex-end;
+	cursor: pointer;
+}
+
+.mobile-icon {
+	width: 35px;
+	height: 35px;
+	border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+	transition: 0.4s;
+}
+
+.mobile-block {
+	display: none;
+	position: absolute;
+	top: 34px;
+	z-index: 1;
+}
+
+.mobile-block .dropdown {
+	background-color: white;
+}
+
+.mobile-block .dropdown:hover {
+	background-color: #f1f1f1;
+}
+
+.mobile-block .dropdown-content {
+	right: 120px;
+	top: 0px;
+	border-radius: 10px 0px 10px 10px / 10px 0px 10px 10px;
+}
+
+.mobile-block .dropdown-content .first {
+	border-radius: 10px 0px 0px 0px / 10px 0px 0px 0px;
+}
+
+.mobile-block .dropdown-content .last {
+	border-radius: 0px 0px 10px 10px / 0px 0px 10px 10px;
+}
+
+.mobile-block #first-drop {
+	border-radius: 10px 0px 0px 0px / 10px 0px 0px 0px;
+}
+
+.mobile-block #first-drop:hover {
+	border-radius: 0px;
+}
+
+.mobile:hover .mobile-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mobile:hover .mobile-icon {
+	background-color: white;
+}
+
+.mobile-profile {
+	width: 120px;
+	height: 50px;
+	display: flex;
+}
+
+.mobile-profile div {
+	width: 60px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0px 0px 10px 0px / 0px 0px 10px 0px;
+	background-color: white;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.mobile-profile #first {
+	border-radius: 0px 0px 0px 10px / 0px 0px 0px 10px;
+}
+
+.mobile-profile div:hover {
+	background-color: #f1f1f1;
+}
+
+.mobile-profile div ion-icon{
+	height: 35px;
+	width: 35px;
+}
+
+/**/
 
 .SearchBlock {
 	display: flex;
-	width: 340px;
+	width: 310px;
 	height: 35px;
 	position: relative;
 	transition: 0.4s;
@@ -110,8 +206,8 @@ nav p {
 	background: white;
 	border: none;
 	position: relative;
-	height: 94%;
-	width: 304px;
+	height: 34px;
+	width: 274px;
 	font-size: 16px;
 	outline: none;
 }
@@ -119,7 +215,7 @@ nav p {
 #searchbtn {
 	background: white;
 	position: relative;
-	height: 100%;
+	height: 36px;
 	width: 36px;
 	display: flex;
 	align-items: center;
@@ -138,27 +234,28 @@ nav p {
 	color: white;
 }
 
-.navigation {
+.profile {
 	position: relative;
-	width: 100px;
+	width: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
 
-.navigation ion-icon {
-	height: 40px;
-	width: 40px;
+.profile ion-icon {
+	height: 35px;
+	width: 35px;
 	position: relative;
 }
 
 .general-settings {
-	width: 450px;
 	display: flex;
 	justify-content: space-around;
 	gap: 10px;
 	flex-wrap: wrap-reverse;
 }
+
+/* Slider */
 
 .Slider input{
 	display: none;
@@ -285,9 +382,7 @@ label, a{
 	transition: opacity 0.2s ease-out;
 }
 
-a {
-	text-decoration: none;
-}
+/**/
 
 .advantages {
 	display: flex;
@@ -653,6 +748,18 @@ footer {
 
 	nav {
 		display: none;
+	}
+
+	.profile {
+		display: none;
+	}
+
+	.mobile {
+		display: flex;
+	}
+
+	.SearchBlock {
+		margin-right: 40px;
 	}
 }
 
